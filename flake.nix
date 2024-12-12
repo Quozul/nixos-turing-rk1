@@ -1,16 +1,14 @@
 {
   description = "NixOS configuration for the Turing RK1";
   inputs = {
-    # Stable: github:NixOS/nixpkgs/nixos-24.05
+    # Stable: github:NixOS/nixpkgs/nixos-24.11
     # Unstable: github:NixOS/nixpkgs/nixos-unstable
     nixpkgs = {
-      url = "github:NixOS/nixpkgs/nixos-unstable";
+      url = "github:NixOS/nixpkgs/nixos-24.11";
     };
 
-    # v6.12-rc1
-    # https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tag/?h=v6.12-rc1
     kernel = {
-      url = "git+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git?rev=03dc72319cee7d0dfefee9ae7041b67732f6b8cd";
+      url = "git+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git?rev=fac04efc5c793dccbd07e2d59af9f90b7fc0dca4";
       flake = false;
     };
   };

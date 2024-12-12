@@ -13,7 +13,7 @@ in
 linuxManualConfig {
   inherit src;
 
-  version = "6.12.0-rc1";
+  version = "6.13.0-rc2";
 
   configfile = stdenv.mkDerivation {
     inherit src;
@@ -123,10 +123,4 @@ linuxManualConfig {
     '';
   };
   allowImportFromDerivation = true;
-  kernelPatches = [
-    {
-      name = "rk3588-turing-rk1-fan-curve";
-      patch = ./patches/01_rk3588-turing-rk1-fan-curve.patch;
-    }
-  ];
 }
